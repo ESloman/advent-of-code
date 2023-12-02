@@ -80,7 +80,12 @@ if __name__ == "__main__":
 
     numbers = []
     for line in lines:
+        num = _process_line_part_one(line)
+        numbers.append(num)
+    print(f"Part One total was: {sum(numbers)}")
+
+    numbers = []
+    for line in lines:
         num = _process_line_part_two(line)
         numbers.append(num)
-        print(num)
-    print(f"Total was: {sum(numbers)}")
+    print(f"Part two total was: {sum(numbers)}")

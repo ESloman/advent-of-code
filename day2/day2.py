@@ -105,7 +105,7 @@ def _process_line_part_two(line: str) -> int:
         int: the game's power
     """
     game_txt, games_txt = line.split(":")
-    game_num = int(game_txt.split(" ")[1])
+    int(game_txt.split(" ")[1])
 
     rounds = games_txt.split("; ")
     min_red, min_green, min_blue = 0, 0, 0
@@ -115,9 +115,7 @@ def _process_line_part_two(line: str) -> int:
         min_green = max(min_green, green)
         min_blue = max(min_blue, blue)
 
-    power = min_red * min_green * min_blue
-    print(f"Game {game_num} power is {power}.")
-    return power
+    return min_red * min_green * min_blue
 
 
 if __name__ == "__main__":
@@ -128,8 +126,6 @@ if __name__ == "__main__":
     games = []
     for line in lines:
         num = _process_line_part_one(line)
-        if num:
-            print(f"Game {num} was valid.")
         games.append(num)
     print(f"Sum of valid games is: {sum(games)}")
 
