@@ -1,5 +1,7 @@
 """Advent of Code 2023 Day 2."""
 
+from advent_of_code.util import inputs
+
 _MIN_RED = 12
 _MIN_GREEN = 13
 _MIN_BLUE = 14
@@ -119,8 +121,7 @@ def _process_line_part_two(line: str) -> int:
 
 
 if __name__ == "__main__":
-    with open("input.txt", encoding="utf-8") as f:
-        lines = [ln.strip("\n") for ln in f.readlines()]
+    lines = inputs.get_input()
 
     # part one
     games = []

@@ -1,5 +1,7 @@
 """Advent of Code 2023 Day 1."""
 
+from advent_of_code.util import inputs
+
 
 def _process_line_part_one(line: str) -> int:
     """Calculates the value of the line.
@@ -75,8 +77,7 @@ def _process_line_part_two(line: str) -> int:  # noqa: PLR0912,C901
 
 
 if __name__ == "__main__":
-    with open("input.txt", encoding="utf-8") as f:
-        lines = [ln.strip("\n") for ln in f.readlines()]
+    lines = inputs.get_input()
 
     numbers = []
     for line in lines:

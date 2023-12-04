@@ -1,5 +1,7 @@
 """Advent of Code 2023 Day 3."""
 
+from advent_of_code.util import inputs
+
 ADJACENT_GEAR_NUMBERS = 2
 
 
@@ -137,8 +139,7 @@ def _find_adjacent_numbers(symbol_coords: tuple[int, int], numbers: list[Num], g
 
 
 if __name__ == "__main__":
-    with open("input.txt", encoding="utf-8") as file:
-        lines = [line.strip("\n") for line in file.readlines()]
+    lines = inputs.get_input()
 
     grid = _make_grid(lines)
     numbers = _find_numbers(lines)
