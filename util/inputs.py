@@ -27,6 +27,11 @@ def _get_aoc_day_path(filename: str) -> Path:
     return Path(os.path.dirname(inspect.getmodule(inspect.stack()[2][0]).__file__), filename)
 
 
+def get_example_input_part_two() -> list[str]:
+    """Gets the lines from the 'example_input' file."""
+    return _get_lines(_get_aoc_day_path("example_input_pt2.txt"))
+
+
 def get_example_input() -> list[str]:
     """Gets the lines from the 'example_input' file."""
     return _get_lines(_get_aoc_day_path("example_input.txt"))
