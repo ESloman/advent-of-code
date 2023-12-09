@@ -10,7 +10,7 @@ MIN_DAY = 0
 MAX_DAY = 25
 
 PY_FILE_LINES = [
-    "\n\n from advent_of_code.util import inputs",
+    "\n\nfrom advent_of_code.util import inputs",
     "\n\n\n",
     'if __name__ == "__main__":\n',
     "    lines = inputs.get_example_input()\n",
